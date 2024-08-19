@@ -1,4 +1,4 @@
-package dev.luisjohann.ofxloadbalance;
+package dev.luisjohann.ofxserviceregistry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
