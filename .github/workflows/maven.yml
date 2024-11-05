@@ -33,7 +33,7 @@ jobs:
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: luisfj/ofx-service-regitry
+        image: luisfj/ofx-service-registry
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
@@ -53,4 +53,4 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
         script: |
-          cd /srv;docker stop ofx-service-regitry;docker rm ofx-service-regitry;docker rmi luisfj/ofx-service-regitry;docker pull luisfj/ofx-service-regitry:latest;docker run -d -m 250m --env-file ./deploy/env.list --network prodnet --name ofx-service-regitry -p 8761:8761 --restart on-failure:5 luisfj/ofx-service-regitry
+          cd /srv;docker stop ofx-service-registry;docker rm ofx-service-registry;docker rmi luisfj/ofx-service-registry;docker pull luisfj/ofx-service-registry:latest;docker run -d -m 250m --env-file ./deploy/env.list --network prodnet --name ofx-service-registry -p 8761:8761 --restart on-failure:5 luisfj/ofx-service-registry
