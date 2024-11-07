@@ -3,6 +3,7 @@ spring:
     name: ofx-service-registry
 server:
   port: 8761
+  max-http-header-size: 64kb
 eureka:
   client:
     register-with-eureka: false
