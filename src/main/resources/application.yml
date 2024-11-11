@@ -4,8 +4,6 @@ spring:
 server:
   port: 8761
   max-http-header-size: 64kb
-  ssl:
-    enabled: false
 eureka:
   client:
     register-with-eureka: false
