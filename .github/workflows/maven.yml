@@ -53,4 +53,4 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
         script: |
-          cd /srv;docker stop ofx-service-registry;docker rm ofx-service-registry;docker rmi luisfj/ofx-service-registry;docker pull luisfj/ofx-service-registry:latest;docker run -d -m 250m --env-file ./deploy/env.list --network prodnet --name ofx-service-registry -p 8761:8761 --restart on-failure:5 luisfj/ofx-service-registry
+          cd /srv;docker stop ofx-service-registry;docker rm ofx-service-registry;docker rmi luisfj/ofx-service-registry;docker pull luisfj/ofx-service-registry:latest;docker run -d -m 400m --env-file ./deploy/env.list --network prodnet --name ofx-service-registry -p 8761:8761 --restart on-failure:5 luisfj/ofx-service-registry
